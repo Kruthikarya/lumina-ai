@@ -1,0 +1,12 @@
+services:
+  web:
+    build: .
+    image: lumina-ai:latest
+    container_name: lumina-ai
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+      PORT: "3000"
+      HOST: 0.0.0.0
+    restart: unless-stopped

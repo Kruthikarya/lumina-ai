@@ -1,0 +1,315 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * LUMINA AI — Emerald Prestige design system.
+ * Heading: Sora · Body: Manrope.
+ * Primary: emerald, Accent: gold.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /* Emerald Prestige — Light */
+  --background: oklch(0.99 0.005 95);
+  --foreground: oklch(0.18 0.03 165);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.03 165);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.03 165);
+  --primary: oklch(0.42 0.11 165);            /* deep emerald */
+  --primary-foreground: oklch(0.98 0.01 95);
+  --secondary: oklch(0.96 0.015 150);
+  --secondary-foreground: oklch(0.25 0.06 165);
+  --muted: oklch(0.96 0.012 140);
+  --muted-foreground: oklch(0.48 0.03 165);
+  --accent: oklch(0.94 0.04 150);
+  --accent-foreground: oklch(0.28 0.08 165);
+  --gold: oklch(0.78 0.13 85);                /* warm gold */
+  --gold-foreground: oklch(0.22 0.05 80);
+  --destructive: oklch(0.58 0.22 27);
+  --destructive-foreground: oklch(0.98 0.01 95);
+  --success: oklch(0.62 0.16 155);
+  --warning: oklch(0.78 0.16 75);
+  --border: oklch(0.9 0.015 150);
+  --input: oklch(0.92 0.012 150);
+  --ring: oklch(0.5 0.12 165);
+
+  --chart-1: oklch(0.45 0.12 165);
+  --chart-2: oklch(0.78 0.13 85);
+  --chart-3: oklch(0.62 0.14 195);
+  --chart-4: oklch(0.55 0.18 25);
+  --chart-5: oklch(0.7 0.15 145);
+
+  --sidebar: oklch(0.97 0.012 150);
+  --sidebar-foreground: oklch(0.22 0.04 165);
+  --sidebar-primary: oklch(0.42 0.11 165);
+  --sidebar-primary-foreground: oklch(0.98 0.01 95);
+  --sidebar-accent: oklch(0.93 0.025 150);
+  --sidebar-accent-foreground: oklch(0.25 0.07 165);
+  --sidebar-border: oklch(0.9 0.015 150);
+  --sidebar-ring: oklch(0.5 0.12 165);
+}
+
+.dark {
+  --background: oklch(0.16 0.02 170);
+  --foreground: oklch(0.96 0.01 95);
+  --card: oklch(0.21 0.03 170);
+  --card-foreground: oklch(0.96 0.01 95);
+  --popover: oklch(0.21 0.03 170);
+  --popover-foreground: oklch(0.96 0.01 95);
+  --primary: oklch(0.72 0.14 160);            /* luminous emerald */
+  --primary-foreground: oklch(0.14 0.03 170);
+  --secondary: oklch(0.27 0.04 170);
+  --secondary-foreground: oklch(0.96 0.01 95);
+  --muted: oklch(0.25 0.03 170);
+  --muted-foreground: oklch(0.72 0.02 150);
+  --accent: oklch(0.3 0.06 170);
+  --accent-foreground: oklch(0.96 0.01 95);
+  --gold: oklch(0.82 0.14 88);
+  --gold-foreground: oklch(0.18 0.04 80);
+  --destructive: oklch(0.65 0.2 25);
+  --destructive-foreground: oklch(0.98 0.01 95);
+  --success: oklch(0.72 0.16 160);
+  --warning: oklch(0.82 0.16 80);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: oklch(0.65 0.13 165);
+
+  --chart-1: oklch(0.72 0.14 160);
+  --chart-2: oklch(0.82 0.14 88);
+  --chart-3: oklch(0.68 0.14 200);
+  --chart-4: oklch(0.65 0.2 25);
+  --chart-5: oklch(0.78 0.15 140);
+
+  --sidebar: oklch(0.18 0.025 170);
+  --sidebar-foreground: oklch(0.92 0.012 95);
+  --sidebar-primary: oklch(0.72 0.14 160);
+  --sidebar-primary-foreground: oklch(0.14 0.03 170);
+  --sidebar-accent: oklch(0.27 0.04 170);
+  --sidebar-accent-foreground: oklch(0.96 0.01 95);
+  --sidebar-border: oklch(1 0 0 / 8%);
+  --sidebar-ring: oklch(0.65 0.13 165);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html, body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@utility gradient-emerald {
+  background-image: linear-gradient(135deg, oklch(0.42 0.11 165) 0%, oklch(0.55 0.13 155) 50%, oklch(0.78 0.13 85) 100%);
+}
+@utility gradient-text {
+  background-image: linear-gradient(120deg, var(--color-primary), var(--color-gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+@utility glass {
+  background-color: color-mix(in oklab, var(--color-card) 70%, transparent);
+  backdrop-filter: blur(12px);
+  border: 1px solid color-mix(in oklab, var(--color-border) 80%, transparent);
+}
+@utility shadow-elegant {
+  box-shadow: 0 10px 40px -12px color-mix(in oklab, var(--color-primary) 25%, transparent);
+}
+@utility shadow-glow {
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--color-primary) 30%, transparent),
+    0 8px 30px -6px color-mix(in oklab, var(--color-primary) 45%, transparent);
+}
+@utility hover-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px -18px color-mix(in oklab, var(--color-primary) 40%, transparent);
+  }
+}
+@keyframes lumina-shimmer {
+  100% { transform: translateX(100%); }
+}
+@utility skeleton-shimmer {
+  position: relative;
+  overflow: hidden;
+  background-color: color-mix(in oklab, var(--color-muted) 90%, transparent);
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background-image: linear-gradient(90deg, transparent, color-mix(in oklab, var(--color-foreground) 8%, transparent), transparent);
+    animation: lumina-shimmer 1.6s infinite;
+  }
+}
+
+
+/* ---------- Premium motion utilities ---------- */
+@keyframes lumina-ripple {
+  from { transform: scale(0); opacity: 0.45; }
+  to { transform: scale(2.6); opacity: 0; }
+}
+@utility btn-ripple {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 120%;
+    aspect-ratio: 1;
+    translate: -50% -50%;
+    border-radius: 9999px;
+    background-color: color-mix(in oklab, currentColor 28%, transparent);
+    transform: scale(0);
+    opacity: 0;
+    pointer-events: none;
+  }
+  &:active::after {
+    animation: lumina-ripple 0.6s ease-out;
+  }
+}
+
+@utility img-zoom {
+  overflow: hidden;
+  & img {
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform;
+  }
+  &:hover img {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes lumina-pulse-ring {
+  0% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--color-primary) 55%, transparent); }
+  70% { box-shadow: 0 0 0 8px color-mix(in oklab, var(--color-primary) 0%, transparent); }
+  100% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--color-primary) 0%, transparent); }
+}
+@utility pulse-ring {
+  animation: lumina-pulse-ring 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes lumina-pop {
+  0% { transform: scale(1); }
+  45% { transform: scale(1.35); }
+  100% { transform: scale(1); }
+}
+@utility pop-once {
+  animation: lumina-pop 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes lumina-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+@utility float-soft {
+  animation: lumina-float 4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Prism syntax tokens for the interview code editor */
+.code-surface .token.comment,
+.code-surface .token.prolog,
+.code-surface .token.doctype,
+.code-surface .token.cdata { color: #64748b; font-style: italic; }
+.code-surface .token.punctuation { color: #94a3b8; }
+.code-surface .token.property,
+.code-surface .token.tag,
+.code-surface .token.constant,
+.code-surface .token.symbol,
+.code-surface .token.deleted { color: #f472b6; }
+.code-surface .token.boolean,
+.code-surface .token.number { color: #fbbf24; }
+.code-surface .token.selector,
+.code-surface .token.attr-name,
+.code-surface .token.string,
+.code-surface .token.char,
+.code-surface .token.builtin,
+.code-surface .token.inserted { color: #34d399; }
+.code-surface .token.operator,
+.code-surface .token.entity,
+.code-surface .token.url { color: #7dd3fc; }
+.code-surface .token.atrule,
+.code-surface .token.attr-value,
+.code-surface .token.keyword { color: #60a5fa; }
+.code-surface .token.function,
+.code-surface .token.class-name { color: #e879f9; }
+.code-surface .token.regex,
+.code-surface .token.important,
+.code-surface .token.variable { color: #fdba74; }

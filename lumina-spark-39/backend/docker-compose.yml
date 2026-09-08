@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: lumina-profile-db
+    environment:
+      POSTGRES_DB: lumina_profile
+      POSTGRES_USER: lumina
+      POSTGRES_PASSWORD: lumina
+    ports:
+      - "5432:5432"
+    volumes:
+      - lumina_profile_pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U lumina -d lumina_profile"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  lumina_profile_pg:
